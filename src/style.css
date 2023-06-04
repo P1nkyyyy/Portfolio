@@ -204,6 +204,9 @@
   transform: translateX(0);
   transition: 1s;
 }
+.about .about-container .about-description {
+  overflow-x: hidden;
+}
 .about .about-container .about-description h2 {
   line-height: 1rem;
   margin: 1rem 0;
@@ -268,6 +271,10 @@
     display: flex;
     max-width: 1000px;
     gap: 2rem;
+  }
+  .content-table .container .table video,
+  .content-table .container .table img {
+    width: 10%;
   }
   .content-table .container .table .text {
     flex: 3;
@@ -395,6 +402,7 @@
 }
 #contact .contact-container {
   margin-top: 1rem;
+  overflow-x: hidden;
 }
 #contact .contact-container .contact-element {
   display: flex;

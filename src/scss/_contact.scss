@@ -4,6 +4,7 @@
 
     .contact-container {
         margin-top: 1rem;
+        overflow-x: hidden;
 
         .contact-element {
             @include flex(none, center);
