@@ -1,0 +1,106 @@
+.navigation {
+    @include flex(space-between, center);
+    padding: clamp(0.75rem, 4vw, 1rem) clamp(2rem, 4vw, 4rem);
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 999;
+
+    h3,
+    a {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .nav-right {
+        .menu {
+            display: none;
+        }
+
+        li {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: $mainColor;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+            }
+            &:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+
+            a {
+                color: black;
+            }
+        }
+
+        .mobile-menu {
+            @include flex(space-evenly, center);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0;
+            background-color: #fff;
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+
+    .mobile-menu-btn {
+        cursor: pointer;
+        position: absolute;
+        right: 2rem;
+        top: 0rem;
+        height: 57px;
+        background: none;
+        border: none;
+        z-index: 998;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 29px;
+        height: 4px;
+        background-color: black;
+        margin: 5px 0;
+        transition: 0.4s;
+        border-radius: 2rem;
+    }
+
+    .bar2 {
+        width: 20px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .navigation {
+        .nav-right {
+            .menu {
+                display: flex;
+                gap: 2rem;
+            }
+
+            .mobile-menu {
+                display: none;
+            }
+        }
+
+        .mobile-menu-btn {
+            display: none;
+        }
+        h3 {
+            position: static;
+        }
+    }
+}

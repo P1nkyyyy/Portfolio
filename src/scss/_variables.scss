@@ -1,0 +1,30 @@
+@mixin flex($content, $aligin) {
+    display: flex;
+    justify-content: $content;
+    align-items: $aligin;
+}
+
+@mixin animationShow($transition, $transform) {
+    opacity: 1;
+    filter: blur(0);
+    transform: $transform;
+    transition: $transition;
+}
+
+@mixin animationHide($transition, $transform) {
+    opacity: 0;
+    filter: blur(5px);
+    transform: $transform;
+    transition: $transition;
+}
+
+$textColor: #767676;
+$mainColor: #008f7a;
+
+$mainBackground: #fff;
+$secBackground: #f9f9f9;
+
+$sectionPadding: 12rem 2rem;
+$containerWidth: 1000px;
+
+$fontSizeH2: clamp(1.1rem, 2vw, 1.3rem);

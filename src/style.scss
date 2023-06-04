@@ -1,0 +1,57 @@
+@import "./scss/variables";
+@import "./scss/navbar";
+@import "./scss/hero";
+@import "./scss/about";
+@import "./scss/contentTable";
+@import "./scss/projects";
+@import "./scss/experience";
+@import "./scss/contact";
+@import "./scss/footer";
+
+body {
+    margin: 0;
+    background-color: #f9f9f9;
+    font-family: "Poppins", sans-serif;
+    color: #212427;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+h4 {
+    color: $mainColor;
+    text-transform: uppercase;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon-container {
+    background-color: white;
+    line-height: 0.75rem;
+    padding: clamp(0.65rem, 4vw, 0.8rem);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: 150ms;
+    user-select: none;
+}
+
+.section-title {
+    color: $mainColor;
+    text-transform: uppercase;
+    font-size: $fontSizeH2;
+}

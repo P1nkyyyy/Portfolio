@@ -1,0 +1,58 @@
+.about {
+    background-color: $mainBackground;
+    padding: $sectionPadding;
+    text-align: center;
+
+    .about-container {
+        max-width: 400px;
+        margin: 0 auto;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1.2em;
+            object-fit: contain;
+        }
+
+        .about-hide {
+            @include animationHide(1s, translateX(100%));
+        }
+
+        .about-show {
+            @include animationShow(1s, translateX(0));
+        }
+
+        .about-description {
+            h2 {
+                line-height: 1rem;
+                margin: 1rem 0;
+            }
+
+            p {
+                margin: 0;
+                color: $textColor;
+                font-size: clamp(1rem, 2vw, 1.1rem);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .about {
+        text-align: start;
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-content: center;
+            gap: 2rem;
+
+            max-width: none;
+            max-width: $containerWidth;
+
+            img {
+                max-width: 400px;
+            }
+        }
+    }
+}

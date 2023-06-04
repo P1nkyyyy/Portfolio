@@ -1,0 +1,47 @@
+.content-table {
+    padding: $sectionPadding;
+    @include flex(center, center);
+
+    .section-title {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        .table {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: clamp(0.5rem, 3vw, 2rem) clamp(0.5rem, 3vw, 2rem);
+            max-width: 500px;
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            video,
+            img {
+                border-radius: 0.3em;
+                width: 100%;
+                height: auto;
+
+                flex: 4;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 880px) {
+    .content-table {
+        .container {
+            max-height: none;
+            .table {
+                display: flex;
+                max-width: $containerWidth;
+                gap: 2rem;
+
+                .text {
+                    flex: 3;
+                }
+            }
+        }
+    }
+}

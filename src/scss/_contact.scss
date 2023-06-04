@@ -1,0 +1,44 @@
+#contact {
+    max-width: $containerWidth;
+    padding: 3rem 0;
+
+    .contact-container {
+        margin-top: 1rem;
+
+        .contact-element {
+            @include flex(none, center);
+            margin-top: 1.5rem;
+            .icon-container {
+                padding: 1.1rem;
+                margin-right: 1rem;
+
+                img {
+                    width: 40px;
+                }
+            }
+
+            h4 {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 570px) {
+    #contact {
+        margin: 0 auto;
+
+        .contact-container {
+            @include flex(space-between, center);
+            margin-top: 4rem;
+
+            .contact-show {
+                @include animationShow(1s, translateX(0));
+            }
+
+            .contact-hide {
+                @include animationHide(1s, translateX(100%));
+            }
+        }
+    }
+}
