@@ -1,10 +1,8 @@
 import React from "react";
 import { ItemExperience } from "../../../components/ItemExperience";
 import icons from "../../../assets/index";
-import test from "../../../assets/untitled.png";
+import laptop from "../../../assets/laptop.png";
 import "animate.css";
-
-//Desing sestav ve fastreportu      Příprava dat ve SQL pro sestavy             Vytaváření sestav ve fastreportu pro ekonomický software Stereo pro Windows včetně
 
 export const Experience = () => {
   return (
@@ -12,7 +10,7 @@ export const Experience = () => {
       <div className="experience-container">
         <h2 className="section-title">Experience</h2>
         <div className="experience-content">
-          <img className="main-img" src={test} alt="" />
+          <img className="main-img" src={laptop} alt="" />
           <ItemExperience
             className="item-1"
             header="Kastner Software"

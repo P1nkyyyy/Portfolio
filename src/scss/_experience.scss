@@ -1,6 +1,6 @@
 .experience {
     background-color: $mainBackground;
-    padding: $sectionPadding;
+    padding: $sectionPaddingMobile;
     text-align: center;
 
     .experience-container {
@@ -9,7 +9,7 @@
 
         .experience-content {
             .main-img {
-                width: 250px;
+                width: 300px;
                 background-image: none;
             }
 
@@ -50,6 +50,7 @@
 
 @media screen and (min-width: 780px) {
     .experience {
+        padding: $sectionPadding;
         .experience-container {
             max-width: $containerWidth;
 
@@ -84,7 +85,7 @@
         .experience-container {
             .experience-content {
                 .main-img {
-                    width: 350px;
+                    width: 450px;
                 }
             }
         }

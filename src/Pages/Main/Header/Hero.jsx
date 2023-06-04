@@ -17,7 +17,7 @@ export const Hero = () => {
   return (
     <section className="hero" id="hero">
       <div className="hero-avatar">
-        <img className="avatar" src={icons.avatar} alt="" />
+        <img className="avatar" src={icons.avatar} alt="picture of me" />
       </div>
       <div className="hero-text">
         <h1>Frontend Developer</h1>
@@ -27,7 +27,7 @@ export const Hero = () => {
         </p>
         <div className="github-container">
           <a href="https://github.com/P1nkyyyy" target="_blank">
-            <img src={icons.github} alt="" />
+            <img src={icons.github} alt="github logo" />
           </a>
         </div>
         <div className="languages-container">

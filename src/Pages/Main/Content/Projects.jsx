@@ -10,7 +10,7 @@ export const Projects = () => {
     inView: projectIsVisible,
     entry,
   } = useInView({
-    rootMargin: "-250px 0px -250px 0px",
+    rootMargin: "-300px 0px -250px 0px",
   });
   const [currentSelected, setCurrentSelected] = useState(1);
 

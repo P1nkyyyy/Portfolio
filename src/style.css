@@ -118,6 +118,12 @@
 .hero .hero-text .github-container {
   margin: 1.5rem 0;
 }
+.hero .hero-text .github-container img {
+  transition: 150ms;
+}
+.hero .hero-text .github-container img:hover {
+  transform: scale(1.2);
+}
 .hero .hero-text .languages-container {
   border-top: 1px solid black;
   padding-top: 1.5rem;
@@ -172,8 +178,8 @@
 }
 .about {
   background-color: #fff;
-  padding: 12rem 2rem;
   text-align: center;
+  padding: 6rem 2rem;
 }
 .about .about-container {
   max-width: 400px;
@@ -211,6 +217,7 @@
 @media screen and (min-width: 780px) {
   .about {
     text-align: start;
+    padding: 12rem 2rem;
   }
   .about .about-container {
     display: grid;
@@ -225,7 +232,7 @@
   }
 }
 .content-table {
-  padding: 12rem 2rem;
+  padding: 6rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,6 +258,9 @@
 }
 
 @media screen and (min-width: 880px) {
+  .content-table {
+    padding: 12rem 2rem;
+  }
   .content-table .container {
     max-height: none;
   }
@@ -301,7 +311,7 @@
 
 .experience {
   background-color: #fff;
-  padding: 12rem 2rem;
+  padding: 6rem 2rem;
   text-align: center;
 }
 .experience .experience-container {
@@ -312,7 +322,7 @@
   /* ANIMATION */
 }
 .experience .experience-container .experience-content .main-img {
-  width: 250px;
+  width: 300px;
   background-image: none;
 }
 .experience .experience-container .experience-content .item {
@@ -348,6 +358,9 @@
 }
 
 @media screen and (min-width: 780px) {
+  .experience {
+    padding: 12rem 2rem;
+  }
   .experience .experience-container {
     max-width: 1000px;
   }
@@ -373,12 +386,12 @@
 }
 @media screen and (min-width: 980px) {
   .experience .experience-container .experience-content .main-img {
-    width: 350px;
+    width: 450px;
   }
 }
 #contact {
   max-width: 1000px;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
 }
 #contact .contact-container {
   margin-top: 1rem;
@@ -483,5 +496,5 @@ a {
 .section-title {
   color: #008f7a;
   text-transform: uppercase;
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-size: clamp(1.2rem, 2vw, 1.3rem);
 }/*# sourceMappingURL=style.css.map */

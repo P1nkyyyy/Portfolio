@@ -28,8 +28,6 @@ function App() {
 
   /* TODO */
   // fotku změnit
-  // opravit menu (křížek když kliknu na item a že zmizí když kliknu na něco)
-  // obrazek v experience udělat
 
   return (
     <>

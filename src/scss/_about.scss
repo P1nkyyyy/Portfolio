@@ -1,8 +1,8 @@
 .about {
     background-color: $mainBackground;
-    padding: $sectionPadding;
-    text-align: center;
 
+    text-align: center;
+    padding: $sectionPaddingMobile;
     .about-container {
         max-width: 400px;
         margin: 0 auto;
@@ -40,6 +40,7 @@
 @media screen and (min-width: 780px) {
     .about {
         text-align: start;
+        padding: $sectionPadding;
 
         .about-container {
             display: grid;
