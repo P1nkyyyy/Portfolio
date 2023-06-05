@@ -10,13 +10,15 @@ export const ContactElement = (props) => {
         contactIsVisible ? "contact-show" : "contact-hide"
       }`}
     >
-      <span className="icon-container">
-        <img src={props.icon} alt="" className="img-hover" />
-      </span>
+      <a href={props.href} className="icon-container" target="_blank">
+        <img src={props.icon} alt={props.alt} className="img-hover" />
+      </a>
 
       <div>
         <h4>{props.header}</h4>
-        <span>{props.text}</span>
+        <a href={props.href} target="_blank">
+          {props.text}
+        </a>
       </div>
     </div>
   );

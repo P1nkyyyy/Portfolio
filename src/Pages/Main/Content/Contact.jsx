@@ -14,12 +14,16 @@ export const Contact = () => {
           text="michal@pinkava.com"
           icon={Email}
           animation="left"
+          alt="Email icon"
+          href="mailto:michal@pinkava.com"
         />
         <ContactElement
           header="Github"
           text="P1nkyyyy"
           icon={Github}
           animation="right"
+          alt="Github icon"
+          href="https://github.com/P1nkyyyy"
         />
       </div>
     </section>
