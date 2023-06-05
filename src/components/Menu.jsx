@@ -10,35 +10,32 @@ export const Menu = () => {
   return (
     <ul className={`menu ${isOpen ? "mobile-menu" : ""} `}>
       <li>
-        <a href="#" onClick={() => isMobile && handleClick}>
+        <a href="#" onClick={isMobile && handleClick}>
           <Scroll type="id" element="hero" offset={-100}>
             Home
           </Scroll>
         </a>
       </li>
       <li>
-        <a href="#about" onClick={() => isMobile && handleClick}>
+        <a href="#about" onClick={isMobile && handleClick}>
           About
         </a>
       </li>
       <li>
-        <a href="#projects" onClick={() => isMobile && handleClick}>
+        <a href="#projects" onClick={isMobile && handleClick}>
           Projects
         </a>
       </li>
       <li>
-        <a href="#experience" onClick={() => isMobile && handleClick}>
+        <a href="#experience" onClick={isMobile && handleClick}>
           Experience
         </a>
       </li>
       <li>
-        <a href="#contact" onClick={() => isMobile && handleClick}>
+        <a href="#contact" onClick={isMobile && handleClick}>
           Contact
         </a>
       </li>
     </ul>
   );
 };
-/* <Scroll type="id" element="about" offset={-50}>
-            About
-          </Scroll>*/
