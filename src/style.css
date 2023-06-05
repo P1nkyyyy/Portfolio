@@ -192,18 +192,6 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
-.about .about-container .about-hide {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(100%);
-  transition: 1s;
-}
-.about .about-container .about-show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-  transition: 1s;
-}
 .about .about-container .about-description {
   overflow-x: hidden;
 }
@@ -228,6 +216,18 @@
     gap: 2rem;
     max-width: none;
     max-width: 1000px;
+  }
+  .about .about-container .about-hide {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: 1s;
+  }
+  .about .about-container .about-show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: 1s;
   }
   .about .about-container img {
     max-width: 400px;

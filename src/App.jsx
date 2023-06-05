@@ -29,6 +29,8 @@ function App() {
   /* TODO */
   // fotku změnit
   // video na fullscreen
+  // blbne navbar sticky na mobilu
+  // overflow
 
   return (
     <>

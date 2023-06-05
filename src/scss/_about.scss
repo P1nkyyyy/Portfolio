@@ -14,14 +14,6 @@
             object-fit: contain;
         }
 
-        .about-hide {
-            @include animationHide(1s, translateX(100%));
-        }
-
-        .about-show {
-            @include animationShow(1s, translateX(0));
-        }
-
         .about-description {
             overflow-x: hidden;
             h2 {
@@ -50,6 +42,14 @@
 
             max-width: none;
             max-width: $containerWidth;
+
+            .about-hide {
+                @include animationHide(1s, translateX(100%));
+            }
+
+            .about-show {
+                @include animationShow(1s, translateX(0));
+            }
 
             img {
                 max-width: 400px;
