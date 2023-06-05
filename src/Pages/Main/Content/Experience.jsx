@@ -20,7 +20,7 @@ export const Experience = () => {
           <ItemExperience
             className="item-2"
             header="School"
-            text="I graduated from a Secondary Vocational School focused on electrician, where I specialized in programming with Visual Basic and Arduino."
+            text="I graduated from a Secondary Vocational School focused on electronic, where I specialized in programming with Visual Basic and Arduino."
             icon={icons.school}
           />
           <ItemExperience

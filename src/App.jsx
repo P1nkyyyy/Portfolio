@@ -26,8 +26,17 @@ function App() {
     );
   }, [isMobile, isOpen]);
 
+  var ghpages = require("gh-pages");
+  var fs = require("fs");
+
+  fs.writeFile("dist/CNAME", "pinkava.com", function (err) {});
+  ghpages.publish("dist", function (err) {});
+
   /* TODO */
   // fotku změnit
+  // video na fullscreen
+  // video proklik na muj kanal (podbody)
+  // about text oddělit na dva odstavce
 
   return (
     <>
