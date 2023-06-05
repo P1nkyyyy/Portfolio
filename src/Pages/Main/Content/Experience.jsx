@@ -26,7 +26,20 @@ export const Experience = () => {
           <ItemExperience
             className="item-3"
             header="Skills"
-            text="I work with Photoshop, Sony Vegas pro 13 to edit my videos for fun, Figma to design my projects and also blender to make 3D models."
+            text={
+              <span>
+                I work with Photoshop, Sony Vegas pro 13
+                <a
+                  href="https://www.youtube.com/channel/UCKxMRZmZhXyxh4tWU3rA81g"
+                  target="_blank"
+                  className="video-link-yt"
+                >
+                  to edit my videos for fun
+                </a>
+                , Figma to design my projects and also blender to make 3D
+                models.
+              </span>
+            }
             icon={icons.toolBox}
           />
         </div>

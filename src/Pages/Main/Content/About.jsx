@@ -21,10 +21,13 @@ export const About = () => {
           <p>
             Hello, I am a front-end web developer with proficiency in HTML, CSS,
             JavaScript, Sass and React. Also I have small experience in jQuery
-            and Blender. I have a passion for designing and creating responsive
-            websites and applications. I enjoy challenging myself to learn new
-            technologies and techniques to stay current in the ever-evolving
-            world of web development.
+            and Blender.
+          </p>
+          <p>
+            I have a passion for designing and creating responsive websites and
+            applications. I enjoy challenging myself to learn new technologies
+            and techniques to stay current in the ever-evolving world of web
+            development.
           </p>
         </div>
       </div>

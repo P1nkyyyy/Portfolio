@@ -11,7 +11,7 @@ export const Contact = () => {
       <div className="contact-container">
         <ContactElement
           header="E-Mail"
-          text="pinkavamichal10@gmail.com"
+          text="michal@pinkava.com"
           icon={Email}
           animation="left"
         />

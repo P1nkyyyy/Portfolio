@@ -208,11 +208,10 @@
   overflow-x: hidden;
 }
 .about .about-container .about-description h2 {
-  line-height: 1rem;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
 }
 .about .about-container .about-description p {
-  margin: 0;
+  margin: 1rem 0;
   color: #767676;
   font-size: clamp(1rem, 2vw, 1.1rem);
 }
@@ -337,6 +336,14 @@
 }
 .experience .experience-container .experience-content .item p {
   margin: 0.25rem;
+}
+.experience .experience-container .experience-content .item .video-link-yt {
+  color: #008f7a;
+  margin-left: 0.3rem;
+  transition: 150ms;
+}
+.experience .experience-container .experience-content .item .video-link-yt:hover {
+  color: #005c4e;
 }
 .experience .experience-container .experience-content .item .icon {
   width: 45px;
