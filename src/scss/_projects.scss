@@ -10,6 +10,10 @@
             padding-left: clamp(0.75rem, 2vw, 2rem);
         }
 
+        .btn-more {
+            border: 0;
+        }
+
         li {
             &::before {
                 content: " ";

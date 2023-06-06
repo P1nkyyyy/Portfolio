@@ -67,6 +67,7 @@ export const Projects = () => {
                   class={currentSelected === 4 ? "selected" : ""}
                 />
               </ul>
+              <button className="btn-more">See more</button>
             </div>
           }
         />

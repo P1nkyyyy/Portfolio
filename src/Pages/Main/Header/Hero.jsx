@@ -2,10 +2,17 @@ import React, { useEffect, useContext } from "react";
 import { AppContext } from "../../../App";
 import { Languages } from "../../../components/Languages";
 import icons from "../../../assets/index";
+import { useInView } from "react-intersection-observer";
 
 export const Hero = () => {
-  const { isMobile, setIsMobile } = useContext(AppContext);
-
+  const { setIsMobile } = useContext(AppContext);
+  const {
+    ref: heroRef,
+    inView: heroIsVisible,
+    entry,
+  } = useInView({
+    rootMargin: "-350px 0px -350px 0px",
+  });
   const handleResize = () => {
     setIsMobile(false);
     window.innerWidth < 720 && setIsMobile(true);
@@ -14,16 +21,23 @@ export const Hero = () => {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
   });
+
   return (
-    <section className="hero" id="hero">
+    <section ref={heroRef} className="hero" id="hero">
       <div className="hero-avatar">
-        <img className="avatar" src={icons.avatar} alt="picture of me" />
+        <img
+          className={`${"avatar"} ${
+            heroIsVisible ? "avatar-show" : "avatar-hide"
+          }`}
+          src={icons.avatar}
+          alt="picture of me"
+        />
       </div>
       <div className="hero-text">
         <h1>Frontend Developer</h1>
         <p>
-          Hi, I'm Michal Pinkava, 19 years old self-taught FrontEnd developer
-          from Czech Republic 🇨🇿
+          Hi, I'm Michal Pinkava, 19 years old FrontEnd developer from Czech
+          Republic 🇨🇿
         </p>
         <div className="github-container">
           <a href="https://github.com/P1nkyyyy" target="_blank">

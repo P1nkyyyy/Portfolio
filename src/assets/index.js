@@ -14,7 +14,8 @@ import school from "./icons/experience/school.svg"
 
 /* IMAGES */
 import github from "./github.svg";
-import avatar from "./me.jpg"
+import avatar from "./eee2.png"
+
 
 const icons = {
     html, css, js, jQuery, sass, react, github, avatar, academicCap, toolBox, computer, school

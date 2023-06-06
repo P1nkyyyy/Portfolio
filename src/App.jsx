@@ -27,10 +27,8 @@ function App() {
   }, [isMobile, isOpen]);
 
   /* TODO */
-  // fotku změnit
   // video na fullscreen
-  // blbne navbar sticky na mobilu
-  // overflow
+  // přídat odkaz u projectu na app
 
   return (
     <>

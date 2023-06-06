@@ -109,10 +109,10 @@
 .hero .hero-text p {
   margin: 0;
   color: #767676;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
 }
 .hero .hero-text img {
-  width: clamp(20px, 4vw, 30px);
+  width: clamp(15px, 4vw, 30px);
   height: auto;
 }
 .hero .hero-text .github-container {
@@ -135,7 +135,7 @@
   display: flex;
   justify-content: center;
   align-items: none;
-  gap: clamp(1.1rem, 4vw, 1.4rem);
+  gap: clamp(1rem, 4vw, 1.4rem);
   margin-top: 1rem;
 }
 .hero .hero-text .languages-container .icons .icon-container:hover {
@@ -143,7 +143,32 @@
 }
 .hero .hero-avatar .avatar {
   height: auto;
-  width: 16rem;
+  max-width: 20rem;
+  width: 100%;
+  border: 3px solid #008f7a;
+  border-radius: 3rem 1rem;
+  animation: shadowAnimation 2s infinite;
+}
+.hero .hero-avatar .avatar-show {
+  opacity: 1;
+  filter: blur(0);
+  transition: 1s;
+}
+.hero .hero-avatar .avatar-hide {
+  opacity: 0;
+  filter: blur(5px);
+  transition: 1s;
+}
+@keyframes shadowAnimation {
+  0% {
+    box-shadow: rgba(0, 143, 122, 0.2) 0px 7px 29px 0px;
+  }
+  50% {
+    box-shadow: rgba(0, 143, 122, 0.7) 0px 7px 29px 0px;
+  }
+  100% {
+    box-shadow: rgba(0, 143, 122, 0.2) 0px 7px 29px 0px;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -288,6 +313,9 @@
 .projects .project-text ul {
   padding-left: clamp(0.75rem, 2vw, 2rem);
 }
+.projects .project-text .btn-more {
+  border: 0;
+}
 .projects .project-text li::before {
   content: " ";
   display: inline-block;
@@ -329,6 +357,7 @@
 }
 .experience .experience-container .experience-content .main-img {
   width: 300px;
+  width: 100%;
   background-image: none;
 }
 .experience .experience-container .experience-content .item {
