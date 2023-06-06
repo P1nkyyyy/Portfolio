@@ -28,7 +28,7 @@ function App() {
 
   /* TODO */
   // video na fullscreen
-  // přídat odkaz u projectu na app
+  // iphone SE zmizí avatar
 
   return (
     <>
