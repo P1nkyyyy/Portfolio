@@ -14,7 +14,7 @@ import school from "./icons/experience/school.svg"
 
 /* IMAGES */
 import github from "./github.svg";
-import avatar from "./eee2.png"
+import avatar from "./me2.png"
 
 
 const icons = {
