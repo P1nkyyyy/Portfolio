@@ -11,7 +11,7 @@ export const Hero = () => {
     inView: heroIsVisible,
     entry,
   } = useInView({
-    rootMargin: "-350px 0px -350px 0px",
+    rootMargin: "-200px 0px -350px 0px",
   });
   const handleResize = () => {
     setIsMobile(false);
@@ -31,6 +31,7 @@ export const Hero = () => {
           }`}
           src={icons.avatar}
           alt="picture of me"
+          loading="lazy"
         />
       </div>
       <div className="hero-text">

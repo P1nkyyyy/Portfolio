@@ -23,7 +23,8 @@
             color: inherit;
             transition: 150ms;
 
-            &:hover {
+            &:hover,
+            &:active {
                 color: $mainColor;
                 cursor: pointer;
             }
