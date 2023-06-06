@@ -307,14 +307,28 @@
 .projects .project {
   background-color: #fff;
 }
-.projects .project-text {
-  text-align: left;
+.projects .project-text h4 {
+  text-align: center;
 }
 .projects .project-text ul {
   padding-left: clamp(0.75rem, 2vw, 2rem);
 }
 .projects .project-text .btn-more {
-  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Poppins";
+  font-weight: 400;
+  color: inherit;
+  transition: 150ms;
+}
+.projects .project-text .btn-more:hover {
+  color: #008f7a;
+  cursor: pointer;
 }
 .projects .project-text li::before {
   content: " ";

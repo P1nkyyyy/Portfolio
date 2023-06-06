@@ -4,14 +4,29 @@
     }
 
     .project-text {
-        text-align: left;
+        h4 {
+            text-align: center;
+        }
 
         ul {
             padding-left: clamp(0.75rem, 2vw, 2rem);
         }
 
         .btn-more {
-            border: 0;
+            @include flex(center, center);
+            gap: 0.35rem;
+            margin-top: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: "Poppins";
+            font-weight: 400;
+            color: inherit;
+            transition: 150ms;
+
+            &:hover {
+                color: $mainColor;
+                cursor: pointer;
+            }
         }
 
         li {

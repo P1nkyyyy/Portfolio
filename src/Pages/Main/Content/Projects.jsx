@@ -67,7 +67,27 @@ export const Projects = () => {
                   class={currentSelected === 4 ? "selected" : ""}
                 />
               </ul>
-              <button className="btn-more">See more</button>
+              <a
+                href="https://p1nkyyyy.github.io/Countries-library/#"
+                className="btn-more"
+                target="_blank"
+              >
+                <span>See More</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 14 14"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 8v4.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1H6m4 0h3.5V4m0-3.5L7 7"
+                  />
+                </svg>
+              </a>
             </div>
           }
         />
