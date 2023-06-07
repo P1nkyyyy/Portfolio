@@ -4,14 +4,7 @@ import { AppContext } from "../App";
 import { Turn as Hamburger } from "hamburger-react";
 
 export const Navbar = () => {
-  const { setIsOpen, isOpen, toggleDarkMode, checked, handleChange } =
-    useContext(AppContext);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const handleVisible = () => {
-    setIsVisible(!isVisible);
-    console.log("ggg");
-  };
+  const { setIsOpen, isOpen, checked } = useContext(AppContext);
 
   return (
     <nav className="navigation" id="navigation">
@@ -22,7 +15,7 @@ export const Navbar = () => {
         <Hamburger
           toggled={isOpen}
           toggle={setIsOpen}
-          color={checked ? "white" : "black"}
+          color={checked ? "black" : "white"}
         />
       </button>
       <div className="nav-right">
