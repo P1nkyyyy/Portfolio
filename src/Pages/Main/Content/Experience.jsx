@@ -1,8 +1,10 @@
 import React from "react";
 import { ItemExperience } from "../../../components/ItemExperience";
-import icons from "../../../assets/index";
 import laptop from "../../../assets/laptop.png";
-import "animate.css";
+
+import { ToolBox } from "../../../assets/icons/experience/ToolBox";
+import { School } from "../../../assets/icons/experience/School";
+import { Computer } from "../../../assets/icons/experience/Computer";
 
 export const Experience = () => {
   return (
@@ -15,13 +17,13 @@ export const Experience = () => {
             className="item-1"
             header="Kastner Software"
             text="Designing and creating reports in FastReport for the economic software Stereo for Windows, followed by data preparation in SQL for the reports."
-            icon={icons.computer}
+            icon={<Computer />}
           />
           <ItemExperience
             className="item-2"
             header="School"
             text="I graduated from a Secondary Vocational School focused on electronic, where I specialized in programming with Visual Basic and Arduino."
-            icon={icons.school}
+            icon={<School />}
           />
           <ItemExperience
             className="item-3"
@@ -40,7 +42,7 @@ export const Experience = () => {
                 models.
               </span>
             }
-            icon={icons.toolBox}
+            icon={<ToolBox />}
           />
         </div>
       </div>

@@ -16,7 +16,8 @@ export const ItemExperience = (props) => {
     >
       <h4>{props.header}</h4>
       <p>{props.text}</p>
-      <img className="icon" src={props.icon} alt="" />
+      {props.icon}
     </div>
   );
 };
+//<img className="icon" src={props.icon} alt="" />

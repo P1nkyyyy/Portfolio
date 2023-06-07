@@ -3,7 +3,8 @@ import { AppContext } from "../App";
 import Scroll from "react-scroll-to-element";
 
 export const Menu = () => {
-  const { isOpen, setIsOpen, isMobile } = useContext(AppContext);
+  const { isOpen, setIsOpen, isMobile, toggleDarkMode, checked, handleChange } =
+    useContext(AppContext);
 
   const handleClick = () => setIsOpen((current) => !current);
 
@@ -36,6 +37,19 @@ export const Menu = () => {
           Contact
         </a>
       </li>
+      <label className={`${"switch"} `}>
+        <input
+          onClick={toggleDarkMode}
+          type="checkbox"
+          onChange={handleChange}
+          checked={
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? !checked
+              : checked
+          }
+        />
+        <span className="slider"></span>
+      </label>
     </ul>
   );
 };

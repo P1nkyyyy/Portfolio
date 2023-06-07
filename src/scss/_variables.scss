@@ -18,14 +18,42 @@
     transition: $transition;
 }
 
-$textColor: #767676;
 $mainColor: #008f7a;
-
-$mainBackground: #fff;
-$secBackground: #f9f9f9;
 
 $sectionPadding: 12rem 2rem;
 $sectionPaddingMobile: 6rem 2rem;
 $containerWidth: 1000px;
 
 $fontSizeH2: clamp(1.2rem, 2vw, 1.3rem);
+
+// default light mode if user has it on default
+:root,
+:root.light {
+    --mainBackground: #fff;
+    --secBackground: #f9f9f9;
+    --textColor: #212427;
+    --textLightColor: #767676;
+    --projectText: rgba(0, 0, 0, 0.2);
+    --footer: #2c2c2c;
+}
+
+.dark {
+    --mainBackground: #161b22;
+    --secBackground: #1d232c;
+    --textColor: #ffffff;
+    --textLightColor: rgba(255, 255, 255, 0.75);
+    --projectText: rgba(255, 255, 255, 0.2);
+    --footer: #161b22;
+}
+
+// if user has default dark
+@media (prefers-color-scheme: dark) {
+    :root {
+        --mainBackground: #161b22;
+        --secBackground: #1d232c;
+        --textColor: #ffffff;
+        --textLightColor: rgba(255, 255, 255, 0.75);
+        --projectText: rgba(255, 255, 255, 0.2);
+        --footer: #161b22;
+    }
+}

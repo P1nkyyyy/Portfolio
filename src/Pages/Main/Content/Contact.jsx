@@ -1,7 +1,7 @@
 import React from "react";
 import { ContactElement } from "../../../components/ContactElement";
-import Github from "../../../assets/github.svg";
-import Email from "../../../assets/email.svg";
+import { Email } from "../../../assets/Email";
+import { Github } from "../../../assets/Github";
 
 export const Contact = () => {
   return (
@@ -12,7 +12,7 @@ export const Contact = () => {
         <ContactElement
           header="E-Mail"
           text="michal@pinkava.com"
-          icon={Email}
+          icon={<Email />}
           animation="left"
           alt="Email icon"
           href="mailto:michal@pinkava.com"
@@ -20,7 +20,7 @@ export const Contact = () => {
         <ContactElement
           header="Github"
           text="P1nkyyyy"
-          icon={Github}
+          icon={<Github />}
           animation="right"
           alt="Github icon"
           href="https://github.com/P1nkyyyy"

@@ -3,6 +3,7 @@ import { AppContext } from "../../../App";
 import { Languages } from "../../../components/Languages";
 import icons from "../../../assets/index";
 import { useInView } from "react-intersection-observer";
+import { Github } from "../../../assets/Github";
 
 export const Hero = () => {
   const { setIsMobile } = useContext(AppContext);
@@ -42,7 +43,7 @@ export const Hero = () => {
         </p>
         <div className="github-container">
           <a href="https://github.com/P1nkyyyy" target="_blank">
-            <img src={icons.github} alt="github logo" />
+            <Github />
           </a>
         </div>
         <div className="languages-container">

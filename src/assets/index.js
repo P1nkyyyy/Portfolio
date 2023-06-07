@@ -6,19 +6,12 @@ import jQuery from "./icons/hero/jQuery.svg";
 import sass from "./icons/hero/sass.svg";
 import react from "./icons/hero/react.svg";
 
-/* ICONS - EXPERIENCE */
-import academicCap from "./icons/experience/academic-cap.svg"
-import toolBox from "./icons/experience/toolbox.svg"
-import computer from "./icons/experience/computer.svg"
-import school from "./icons/experience/school.svg"
-
 /* IMAGES */
-import github from "./github.svg";
 import avatar from "./me2.png"
 
 
 const icons = {
-    html, css, js, jQuery, sass, react, github, avatar, academicCap, toolBox, computer, school
+    html, css, js, jQuery, sass, react, avatar
 }
 
 export default icons;

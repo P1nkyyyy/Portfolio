@@ -13,6 +13,30 @@ export const AppContext = createContext();
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 720);
   const [isOpen, setIsOpen] = useState(false);
+  const [checked, setChecked] = useState(false);
+
+  const handleChange = () => {
+    setChecked(!checked);
+  };
+
+  const toggleDarkMode = () => {
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+    } else if (document.documentElement.classList.contains("light")) {
+      document.documentElement.classList.remove("light");
+      document.documentElement.classList.add("dark");
+    } else {
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.documentElement.classList.add("light");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+    }
+  };
 
   useEffect(() => {
     window.addEventListener(
@@ -26,13 +50,19 @@ function App() {
     );
   }, [isMobile, isOpen]);
 
-  /* TODO */
-  // video na fullscreen
-  // iphone SE zmizí avatar
-
   return (
-    <>
-      <AppContext.Provider value={{ isMobile, setIsMobile, isOpen, setIsOpen }}>
+    <div className={`${"app"} `}>
+      <AppContext.Provider
+        value={{
+          isMobile,
+          setIsMobile,
+          isOpen,
+          setIsOpen,
+          toggleDarkMode,
+          checked,
+          handleChange,
+        }}
+      >
         <Navbar />
         <main className="main">
           <Hero />
@@ -43,7 +73,7 @@ function App() {
         </main>
         <Footer />
       </AppContext.Provider>
-    </>
+    </div>
   );
 }
 

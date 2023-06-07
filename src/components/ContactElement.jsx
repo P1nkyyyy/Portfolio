@@ -11,7 +11,7 @@ export const ContactElement = (props) => {
       }`}
     >
       <a href={props.href} className="icon-container" target="_blank">
-        <img src={props.icon} alt={props.alt} className="img-hover" />
+        {props.icon}
       </a>
 
       <div>

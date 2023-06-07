@@ -1,5 +1,5 @@
 .about {
-    background-color: $mainBackground;
+    background-color: var(--mainBackground);
 
     text-align: center;
     padding: $sectionPaddingMobile;
@@ -22,7 +22,7 @@
 
             p {
                 margin: 0;
-                color: $textColor;
+                color: var(--textLightColor);
                 font-size: clamp(1rem, 2vw, 1.1rem);
             }
         }

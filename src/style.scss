@@ -7,13 +7,19 @@
 @import "./scss/experience";
 @import "./scss/contact";
 @import "./scss/footer";
+@import "./scss/darkLightMode";
 
 body {
     margin: 0;
-    background-color: #f9f9f9;
+
     font-family: "Poppins", sans-serif;
-    color: #212427;
+
     overflow-x: hidden;
+}
+
+.app {
+    background-color: var(--secBackground);
+    color: var(--textColor);
 }
 
 html {
@@ -41,7 +47,7 @@ a {
 }
 
 .icon-container {
-    background-color: white;
+    background-color: var(--mainBackground);
     line-height: 0.75rem;
     padding: clamp(0.65rem, 4vw, 0.8rem);
     border-radius: 50%;

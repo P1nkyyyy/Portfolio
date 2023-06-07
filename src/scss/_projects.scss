@@ -1,6 +1,6 @@
 .projects {
     .project {
-        background-color: $mainBackground;
+        background-color: var(--mainBackground);
     }
 
     .project-text {
@@ -15,18 +15,23 @@
         .btn-more {
             @include flex(center, center);
             gap: 0.35rem;
-            margin-top: 2rem;
+            margin: 2rem auto 0 auto;
+            padding: 0.5rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-family: "Poppins";
             font-weight: 400;
-            color: inherit;
+            width: 170px;
+            color: var(--textColor);
+            background-color: $mainColor;
             transition: 150ms;
+            border: 1px solid $mainColor;
 
             &:hover,
             &:active {
-                color: $mainColor;
+                color: var(--textColor);
                 cursor: pointer;
+                background-color: transparent;
             }
         }
 
@@ -48,13 +53,14 @@
 
         li,
         p {
-            color: rgba(0, 0, 0, 0.2);
+            //color: rgba(0, 0, 0, 0.2);
+            color: var(--projectText);
         }
 
         .selected {
             li,
             p {
-                color: #212427;
+                color: var(--textColor);
                 transition: 350ms;
             }
             li {

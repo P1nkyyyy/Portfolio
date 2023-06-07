@@ -15,7 +15,7 @@
 
         p {
             margin: 0;
-            color: $textColor;
+            color: var(--textLightColor);
             font-size: clamp(0.9rem, 3vw, 1.2rem);
         }
 
@@ -26,17 +26,13 @@
 
         .github-container {
             margin: 1.5rem 0;
-            img {
-                transition: 150ms;
-                &:hover,
-                &:active {
-                    transform: scale(1.2);
-                }
+            a {
+                color: inherit;
             }
         }
 
         .languages-container {
-            border-top: 1px solid black;
+            border-top: 1px solid var(--textColor);
             padding-top: 1.5rem;
 
             .language-text {
