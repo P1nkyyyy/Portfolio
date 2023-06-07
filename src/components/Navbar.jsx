@@ -15,7 +15,7 @@ export const Navbar = () => {
         <Hamburger
           toggled={isOpen}
           toggle={setIsOpen}
-          color={checked ? "white" : "black"}
+          color={checked ? "black" : "white"}
         />
       </button>
       <div className="nav-right">
