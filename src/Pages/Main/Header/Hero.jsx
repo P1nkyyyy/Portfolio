@@ -14,7 +14,7 @@ export const Hero = () => {
     inView: heroIsVisible,
     entry,
   } = useInView({
-    rootMargin: "-200px 0px -350px 0px",
+    rootMargin: "-100px 0px -350px 0px",
   });
 
   const [imageLoaded, setImageLoaded] = useState(false);
