@@ -5,6 +5,8 @@
   --textColor: #212427;
   --textLightColor: #767676;
   --projectText: rgba(0, 0, 0, 0.2);
+  --aboutYear: rgba(0, 0, 0, 0.75);
+  --aboutItem: #fff;
   --footer: #2c2c2c;
 }
 
@@ -14,6 +16,8 @@
   --textColor: #ffffff;
   --textLightColor: rgba(255, 255, 255, 0.75);
   --projectText: rgba(255, 255, 255, 0.2);
+  --aboutYear: rgba(255, 255, 255, 0.5);
+  --aboutItem: #24292f;
   --footer: #161b22;
 }
 
@@ -24,6 +28,8 @@
     --textColor: #ffffff;
     --textLightColor: rgba(255, 255, 255, 0.75);
     --projectText: rgba(255, 255, 255, 0.2);
+    --aboutYear: rgba(255, 255, 255, 0.5);
+    --aboutItem: #24292f;
     --footer: #161b22;
   }
 }
@@ -250,7 +256,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
-  background-color: #24292f;
+  background-color: var(--aboutItem);
   margin: 1rem 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 1rem 0 1rem 2.5rem;
@@ -305,12 +311,12 @@
     flex-direction: column;
   }
   .about .about-container .timeline-container .timeline-item .timeline-line-short {
-    background: rgba(255, 255, 255, 0.25);
+    background: var(--projectText);
     width: 0.1525rem;
     height: 1.5rem;
   }
   .about .about-container .timeline-container .timeline-item .timeline-line-long {
-    background: rgba(255, 255, 255, 0.25);
+    background: var(--projectText);
     width: 0.1525rem;
     height: 3rem;
   }
@@ -321,8 +327,8 @@
     -webkit-user-select: none;
        -moz-user-select: none;
             user-select: none;
-    font-weight: 200;
-    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    color: var(--aboutYear);
   }
   .about .about-container .timeline-container .timeline-item svg {
     margin: 0.5rem 0;

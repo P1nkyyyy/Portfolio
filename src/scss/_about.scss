@@ -27,7 +27,7 @@
             .about-item {
                 @include flex(flex-start, center);
                 gap: 1rem;
-                background-color: #24292f;
+                background-color: var(--aboutItem);
                 margin: 1rem 0.5rem;
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 padding: 1rem 0 1rem 2.5rem;
@@ -59,7 +59,6 @@
             display: grid;
             grid-template-columns: 1fr 2fr;
             align-content: center;
-            //place-items: center;
             gap: 2rem;
 
             max-width: none;
@@ -83,13 +82,13 @@
                     @include flex(center, center);
                     flex-direction: column;
                     .timeline-line-short {
-                        background: rgba(255, 255, 255, 0.25);
+                        background: var(--projectText);
                         width: 0.1525rem;
                         height: 1.5rem;
                     }
 
                     .timeline-line-long {
-                        background: rgba(255, 255, 255, 0.25);
+                        background: var(--projectText);
                         width: 0.1525rem;
                         height: 3rem;
 
@@ -99,8 +98,8 @@
                             top: 0.65rem;
                             user-select: none;
 
-                            font-weight: 200;
-                            color: rgba(255, 255, 255, 0.5);
+                            font-weight: 400;
+                            color: var(--aboutYear);
                         }
                     }
 

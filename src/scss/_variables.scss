@@ -34,6 +34,8 @@ $fontSizeH2: clamp(1.2rem, 2vw, 1.3rem);
     --textColor: #212427;
     --textLightColor: #767676;
     --projectText: rgba(0, 0, 0, 0.2);
+    --aboutYear: rgba(0, 0, 0, 0.75);
+    --aboutItem: #fff;
     --footer: #2c2c2c;
 }
 
@@ -43,6 +45,8 @@ $fontSizeH2: clamp(1.2rem, 2vw, 1.3rem);
     --textColor: #ffffff;
     --textLightColor: rgba(255, 255, 255, 0.75);
     --projectText: rgba(255, 255, 255, 0.2);
+    --aboutYear: rgba(255, 255, 255, 0.5);
+    --aboutItem: #24292f;
     --footer: #161b22;
 }
 
@@ -54,6 +58,8 @@ $fontSizeH2: clamp(1.2rem, 2vw, 1.3rem);
         --textColor: #ffffff;
         --textLightColor: rgba(255, 255, 255, 0.75);
         --projectText: rgba(255, 255, 255, 0.2);
+        --aboutYear: rgba(255, 255, 255, 0.5);
+        --aboutItem: #24292f;
         --footer: #161b22;
     }
 }
