@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { AppContext } from "../../../App";
 import { Languages } from "../../../components/Languages";
 import icons from "../../../assets/index";
@@ -12,17 +12,29 @@ import {
 } from "../../../assets/icons/LanguagesIndex";
 import { useInView } from "react-intersection-observer";
 import { Github } from "../../../assets/Github";
+import { Blurhash } from "react-blurhash";
 import { Balancer } from "react-wrap-balancer";
 
 export const Hero = () => {
   const { setIsMobile } = useContext(AppContext);
+
   const {
     ref: heroRef,
     inView: heroIsVisible,
     entry,
   } = useInView({
-    rootMargin: "-200px 0px -350px 0px",
+    rootMargin: "-100px 0px -350px 0px",
   });
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setImageLoaded(true);
+    };
+    img.src = icons.avatar;
+  }, [icons.avatar]);
+
   const handleResize = () => {
     setIsMobile(false);
     window.innerWidth < 720 && setIsMobile(true);
@@ -35,14 +47,26 @@ export const Hero = () => {
   return (
     <section ref={heroRef} className="hero" id="hero">
       <div className="hero-avatar">
-        <img
-          className={`${"avatar"} ${
-            heroIsVisible ? "avatar-show" : "avatar-hide"
-          }`}
-          src={icons.avatar}
-          alt="picture of me"
-          loading="lazy"
-        />
+        {!imageLoaded && (
+          <Blurhash
+            hash="L68En,s;5gD*_KjJD+RjNEkBxuoe"
+            width={324}
+            height={302}
+            resolutionX={32}
+            resolutionY={32}
+            punch={1}
+          />
+        )}
+        {imageLoaded && (
+          <img
+            className={`${"avatar"} ${
+              heroIsVisible ? "avatar-show" : "avatar-hide"
+            }`}
+            src={icons.avatar}
+            alt="picture of me"
+            loading="lazy"
+          />
+        )}
       </div>
       <div className="hero-text">
         <h1>Frontend Developer</h1>
