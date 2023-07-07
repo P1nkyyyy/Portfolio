@@ -128,12 +128,12 @@
 .hero .hero-text h1 {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
 }
-.hero .hero-text p {
+.hero .hero-text .balancer {
   margin: 0;
   color: var(--textLightColor);
-  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
 }
-.hero .hero-text img {
+.hero .hero-text svg {
   width: clamp(15px, 4vw, 30px);
   height: auto;
 }
@@ -222,7 +222,7 @@
 }
 .about {
   background-color: var(--mainBackground);
-  text-align: center;
+  text-align: start;
   padding: 6rem 2rem;
 }
 .about .about-container {
@@ -236,21 +236,40 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+.about .about-container svg {
+  max-width: 4.5rem;
+}
+.about .about-container .timeline-container {
+  display: none;
+}
+.about .about-container .about-item-container {
+  margin-top: 2rem;
+}
+.about .about-container .about-item-container .about-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  background-color: #24292f;
+  margin: 1rem 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1rem 0 1rem 2.5rem;
+  border-radius: 0.5em;
+}
 .about .about-container .about-description {
   overflow-x: hidden;
 }
 .about .about-container .about-description h2 {
-  margin: 0 0 1rem 0;
+  margin: 0 0.5rem 1rem 0.5rem;
 }
 .about .about-container .about-description p {
-  margin: 0;
+  margin: 0 0.5rem;
   color: var(--textLightColor);
   font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 @media screen and (min-width: 780px) {
   .about {
-    text-align: start;
     padding: 12rem 2rem;
   }
   .about .about-container {
@@ -260,6 +279,55 @@
     gap: 2rem;
     max-width: none;
     max-width: 1000px;
+    /* ANIMATIONS */
+  }
+  .about .about-container .about-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .about .about-container .about-item-container .about-item {
+    flex-direction: column;
+    width: 8rem;
+    padding: 2rem;
+  }
+  .about .about-container .timeline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about .about-container .timeline-container .timeline-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about .about-container .timeline-container .timeline-item .timeline-line-short {
+    background: rgba(255, 255, 255, 0.25);
+    width: 0.1525rem;
+    height: 1.5rem;
+  }
+  .about .about-container .timeline-container .timeline-item .timeline-line-long {
+    background: rgba(255, 255, 255, 0.25);
+    width: 0.1525rem;
+    height: 3rem;
+  }
+  .about .about-container .timeline-container .timeline-item .timeline-line-long span {
+    position: relative;
+    left: 1rem;
+    top: 0.65rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .about .about-container .timeline-container .timeline-item svg {
+    margin: 0.5rem 0;
+    width: 100%;
+    max-width: 1.5rem;
   }
   .about .about-container .about-hide {
     opacity: 0;
@@ -272,6 +340,45 @@
     filter: blur(0);
     transform: translateX(0);
     transition: 1s;
+  }
+  .about .about-container .about-item-show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+    transition: 1s;
+  }
+  .about .about-container .about-item-hide {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: 1s;
+  }
+  .about .about-container .timeline-item:nth-child(1) {
+    transition-delay: 0.2s;
+  }
+  .about .about-container .timeline-item:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+  .about .about-container .timeline-item:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+  .about .about-container .timeline-item:nth-child(4) {
+    transition-delay: 0.5s;
+  }
+  .about .about-container .timeline-item:nth-child(5) {
+    transition-delay: 0.6s;
+  }
+  .about .about-container .timeline-item:nth-child(6) {
+    transition-delay: 0.7s;
+  }
+  .about .about-container .timeline-item:nth-child(7) {
+    transition-delay: 0.8s;
+  }
+  .about .about-container .timeline-item:nth-child(8) {
+    transition-delay: 0.9s;
+  }
+  .about .about-container .timeline-item:nth-child(9) {
+    transition-delay: 1s;
   }
   .about .about-container img {
     max-width: 400px;

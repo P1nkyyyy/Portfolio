@@ -13,13 +13,13 @@
             font-size: clamp(1.75rem, 3vw, 2.5rem);
         }
 
-        p {
+        .balancer {
             margin: 0;
             color: var(--textLightColor);
-            font-size: clamp(0.9rem, 3vw, 1.2rem);
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
         }
 
-        img {
+        svg {
             width: clamp(15px, 4vw, 30px);
             height: auto;
         }

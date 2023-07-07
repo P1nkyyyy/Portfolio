@@ -37,7 +37,7 @@ export const Menu = () => {
           Contact
         </a>
       </li>
-      <label className={`${"switch"} `} for="darkmode-button">
+      <label className={`${"switch"} `} htmlFor="darkmode-button">
         <input
           id="darkmode-button"
           onClick={toggleDarkMode}

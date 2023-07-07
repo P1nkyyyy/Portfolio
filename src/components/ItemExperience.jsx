@@ -20,4 +20,3 @@ export const ItemExperience = (props) => {
     </div>
   );
 };
-//<img className="icon" src={props.icon} alt="" />

@@ -1,7 +1,7 @@
 .about {
     background-color: var(--mainBackground);
 
-    text-align: center;
+    text-align: start;
     padding: $sectionPaddingMobile;
     .about-container {
         max-width: 400px;
@@ -14,14 +14,36 @@
             object-fit: contain;
         }
 
+        svg {
+            max-width: 4.5rem;
+        }
+
+        .timeline-container {
+            display: none;
+        }
+
+        .about-item-container {
+            margin-top: 2rem;
+            .about-item {
+                @include flex(flex-start, center);
+                gap: 1rem;
+                background-color: #24292f;
+                margin: 1rem 0.5rem;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                padding: 1rem 0 1rem 2.5rem;
+                border-radius: 0.5em;
+            }
+        }
+
         .about-description {
             overflow-x: hidden;
+
             h2 {
-                margin: 0 0 1rem 0;
+                margin: 0 0.5rem 1rem 0.5rem;
             }
 
             p {
-                margin: 0;
+                margin: 0 0.5rem;
                 color: var(--textLightColor);
                 font-size: clamp(1rem, 2vw, 1.1rem);
             }
@@ -31,17 +53,66 @@
 
 @media screen and (min-width: 780px) {
     .about {
-        text-align: start;
         padding: $sectionPadding;
 
         .about-container {
             display: grid;
             grid-template-columns: 1fr 2fr;
             align-content: center;
+            //place-items: center;
             gap: 2rem;
 
             max-width: none;
             max-width: $containerWidth;
+            .about-item-container {
+                @include flex(space-between, center);
+
+                gap: 1rem;
+                .about-item {
+                    flex-direction: column;
+                    width: 8rem;
+                    padding: 2rem;
+                }
+            }
+
+            .timeline-container {
+                @include flex(center, center);
+                flex-direction: column;
+
+                .timeline-item {
+                    @include flex(center, center);
+                    flex-direction: column;
+                    .timeline-line-short {
+                        background: rgba(255, 255, 255, 0.25);
+                        width: 0.1525rem;
+                        height: 1.5rem;
+                    }
+
+                    .timeline-line-long {
+                        background: rgba(255, 255, 255, 0.25);
+                        width: 0.1525rem;
+                        height: 3rem;
+
+                        span {
+                            position: relative;
+                            left: 1rem;
+                            top: 0.65rem;
+                            user-select: none;
+
+                            font-weight: 200;
+                            color: rgba(255, 255, 255, 0.5);
+                        }
+                    }
+
+                    svg {
+                        margin: 0.5rem 0;
+                        width: 100%;
+                        max-width: 1.5rem;
+                    }
+                }
+            }
+
+            /* ANIMATIONS */
 
             .about-hide {
                 @include animationHide(1s, translateX(100%));
@@ -49,6 +120,21 @@
 
             .about-show {
                 @include animationShow(1s, translateX(0));
+            }
+
+            .about-item-show {
+                @include animationShow(1s, translateY(0));
+            }
+
+            .about-item-hide {
+                @include animationHide(1s, translateY(100%));
+            }
+
+            @for $i from 1 through 9 {
+                $delay: ($i + 1) * 0.1;
+                .timeline-item:nth-child(#{$i}) {
+                    transition-delay: #{$delay}s;
+                }
             }
 
             img {

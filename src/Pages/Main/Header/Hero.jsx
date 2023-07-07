@@ -2,8 +2,17 @@ import React, { useEffect, useContext } from "react";
 import { AppContext } from "../../../App";
 import { Languages } from "../../../components/Languages";
 import icons from "../../../assets/index";
+import {
+  HtmlIcon,
+  CssIcon,
+  JavaScriptIcon,
+  JQueryIcon,
+  ReactIcon,
+  SassIcon,
+} from "../../../assets/icons/LanguagesIndex";
 import { useInView } from "react-intersection-observer";
 import { Github } from "../../../assets/Github";
+import { Balancer } from "react-wrap-balancer";
 
 export const Hero = () => {
   const { setIsMobile } = useContext(AppContext);
@@ -37,10 +46,10 @@ export const Hero = () => {
       </div>
       <div className="hero-text">
         <h1>Frontend Developer</h1>
-        <p>
+        <Balancer className="balancer">
           Hi, I'm Michal Pinkava, 19 years old FrontEnd developer from Czech
           Republic 🇨🇿
-        </p>
+        </Balancer>
         <div className="github-container">
           <a href="https://github.com/P1nkyyyy" target="_blank">
             <Github />
@@ -49,12 +58,12 @@ export const Hero = () => {
         <div className="languages-container">
           <span className="language-text">Languages</span>
           <div className="icons">
-            <Languages source={icons.html} alt="Html" />
-            <Languages source={icons.css} alt="Css" />
-            <Languages source={icons.js} alt="JavaScript" />
-            <Languages source={icons.jQuery} alt="jQuery" />
-            <Languages source={icons.sass} alt="Sass" />
-            <Languages source={icons.react} alt="React" />
+            <Languages source={<HtmlIcon />} alt="Html" />
+            <Languages source={<CssIcon />} alt="Css" />
+            <Languages source={<JavaScriptIcon />} alt="JavaScript" />
+            <Languages source={<JQueryIcon />} alt="jQuery" />
+            <Languages source={<ReactIcon />} alt="Sass" />
+            <Languages source={<SassIcon />} alt="React" />
           </div>
         </div>
       </div>
