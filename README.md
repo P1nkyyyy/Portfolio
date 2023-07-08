@@ -3,20 +3,21 @@
   <a href="https://pinkava.com" target:"_blank">pinkava.com</a>
 </h1>
 
-![Screenshot](src/weeb.png)
+![Screenshot](src/weeeb.png)
 
 ## Built With
+
 This project was built using these technologies:
-  - React
-  - Sass
-  - Node.js
-  - VsCode
-  - Photoshop
+
+- React
+- Sass
+- Node.js
+- VsCode
+- Photoshop
+
 ## Features
-  - 📄 One page layout
-  - 📱 Fully responsive
-  - 🎨 Styled with Sass preprocessor
-  - 👉 Reveal Animations
 
-
-
+- 📄 One page layout
+- 📱 Fully responsive
+- 🎨 Styled with Sass preprocessor
+- 👉 Reveal Animations
